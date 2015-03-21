@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery - element is in viewport</title>
+
+    <style>
+        * { margin: 0; padding: 0 }
+        html, body { width: 100%; height: 100%; }
+        body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 22px; }
+        section { height: 500px; height: 101vh; display: flex; align-items: center;  justify-content: center; }
+        section:nth-child(odd) { background-color: #ddd; }
+        section:nth-child(even) { background-color: #f9f9f9; }
+        .console { position: fixed; top: 20px; right: 20px; width: 200px; background: #777; color: #fff; padding: 20px; font-size: 12px; line-height: 18px; }
+        .console-two { top: 120px; }
+        .console-three { right: 0; left: 20px; width: 250px; font-size: 9px; line-height: 12px; height: 87%; overflow: auto; }
+    </style>
+</head>
+<body>
+
+    <section class="section-one">I am section one!</section>
+    <section class="section-two">I am section two!</section>
+    <section class="section-three">I am section three!</section>
+    <section class="section-four">I am section four!</section>
+    <section class="section-five">I am section five!</section>
+
+    <div class="console console-one">Scroll down or up to see difference! it will update when section three is immediately visible.</div>
+    <div class="console console-two">It will update when section two 50% is visible.</div>
+    <div class="console console-three">Scroll man! ;) <br></div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="jquery.isinviewport.js"></script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $('.section-three').isInViewport(function(response){
+                $('.console-one').html('.section-three is in viewport : ' + response);
+            });
+
+            $('.section-two').isInViewport({ inset : 0.5 }, function(response){
+                $('.console-two').html('.section-two is in viewport : ' + response);
+            });
+
+            $('section').isInViewport(function(response, element){
+                $('.console-three').append($(element).attr('class') + ' is in viewport : ' + response + '<br>');
+            });
+        });
+    </script>
+</body>
+</html>
