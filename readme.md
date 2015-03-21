@@ -8,6 +8,9 @@ $('.selector').isInViewport(function(response, element){
 });
 ```
 
+### Demo:
+[http://habibhadi.com/lab/isInViewport/](http://habibhadi.com/lab/isInViewport/)
+
 ### Using bower?
 ```
 bower install is-in-viewport --save-dev
