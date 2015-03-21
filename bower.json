@@ -1,0 +1,17 @@
+{
+  "name": "jQuery isInViewport",
+  "version": "v1.0.0",
+  "homepage": "https://github.com/im4aLL/isInViewport",
+  "authors": [
+    "Hadi@macBookPro <me@habibhadi.com>"
+  ],
+  "description": "element is in viewport or not",
+  "main": "jquery.isinviewport.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "viewport"
+  ],
+  "license": "MIT"
+}
