@@ -45,6 +45,7 @@
                 _this.callback.call(this, _this.inViewport(), _this.element);
             }, _this.timeout);
         });
+        _this.callback.call(this, _this.inViewport(), _this.element);
     };
 
     Plugin.prototype.inViewport = function(){
