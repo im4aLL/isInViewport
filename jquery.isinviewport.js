@@ -45,6 +45,8 @@
                 _this.callback.call(this, _this.inViewport(), _this.element);
             }, _this.timeout);
         });
+
+        // fire callback on load
         _this.callback.call(this, _this.inViewport(), _this.element);
     };
 
