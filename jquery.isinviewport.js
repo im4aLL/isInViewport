@@ -1,7 +1,7 @@
 /*!
  * jQuery isInViewport
  * @author: me@habibhadi.com
- * @version v1.0.0
+ * @version v1.0.3
  */
 ;(function ( $, window, document, undefined ) {
     'use strict';
