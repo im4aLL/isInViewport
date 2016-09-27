@@ -43,7 +43,7 @@
             clearTimeout(scrolling);
             scrolling = setTimeout(function(){
                 _this.callback.call(this, _this.inViewport(), _this.element);
-            }, _this.timeout);
+            }, _this.options.timeout);
         });
 
         // fire callback on load
